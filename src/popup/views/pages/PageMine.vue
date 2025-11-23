@@ -79,7 +79,7 @@
   </div>
 </template>
 <script lang="ts">
-import SettingPage from '@/popup/components/pages/pageComponents/settingPage.vue'
+import SettingPage from '@/popup/views/pages/pageComponents/SettingPage.vue'
 import { Setting } from '@element-plus/icons-vue'
 import { routerMain } from '@/popup/router/routers'
 import { localGet, localSet } from '@/utils/chromeUtils'

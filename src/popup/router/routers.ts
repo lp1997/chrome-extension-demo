@@ -3,27 +3,27 @@ export const routerMain: pageTabs[] = [
   {
     path: '/',
     title: '页面信息',
-    name: 'PageHello',
+    name: 'PageInfo',
     isCom: true, // 不可隐藏
-    component: () => import(/* webpackChunkName: "PageHello" */ '@/popup/components/pages/pageInfo.vue')
+    component: () => import(/* webpackChunkName: "PageInfo" */ '@/popup/views/pages/PageInfo.vue')
   },
   {
-    path: '/pageMine',
+    path: '/PageMine',
     title: '个人中心',
-    name: 'pageMine',
+    name: 'PageMine',
     isCom: true, // 不可隐藏
-    component: () => import(/* webpackChunkName: "pageMine" */ '@/popup/components/pages/pageMine.vue')
+    component: () => import(/* webpackChunkName: "PageMine" */ '@/popup/views/pages/PageMine.vue')
   },
   {
-    path: '/pageDescInfo',
+    path: '/PageDescInfo',
     title: '版本记录',
-    name: 'pageDescInfo',
-    component: () => import(/* webpackChunkName: "pageDescInfo" */ '@/popup/components/pages/funcPages/pageDescInfo.vue')
+    name: 'PageDescInfo',
+    component: () => import(/* webpackChunkName: "PageDescInfo" */ '@/popup/views/pages/funcPages/PageDescInfo.vue')
   },
   {
-    path: '/pageMemorandum',
+    path: '/PageMemorandum',
     title: '备忘提醒',
-    name: 'pageMemorandum',
-    component: () => import(/* webpackChunkName: "pageMemorandum" */ '@/popup/components/pages/funcPages/pageMemorandum.vue')
+    name: 'PageMemorandum',
+    component: () => import(/* webpackChunkName: "PageMemorandum" */ '@/popup/views/pages/funcPages/PageMemorandum.vue')
   }
 ]
