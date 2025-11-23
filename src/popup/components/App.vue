@@ -39,7 +39,9 @@ const changeUserType = (val:string[]) => { // tab页面选择更新
   nextTick(() => {
     const addTabList = []
     for (const el of selList.value) { // 添加选中的tab页面
-      addTabList.push(routerMain.find((item:{name:string}) => item.name === el) as pageTabs)
+      if (routerMain.find((item:{name:string}) => item.name === el)) {
+        addTabList.push(routerMain.find((item:{name:string}) => item.name === el) as pageTabs)
+      }
     }
     filterTableData.value = [...[routerMain[0]], ...addTabList, ...[routerMain[1]]]
   })
