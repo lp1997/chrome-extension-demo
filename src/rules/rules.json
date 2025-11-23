@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "priority": 1,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/js/returnjs.js"
+      }
+    },
+    "condition": {
+      "urlFilter": "csdn-login-box.js",
+      "resourceTypes": ["script"]
+    }
+  }
+]

@@ -1,0 +1,72 @@
+{
+    "manifest_version": 3,
+    "author": "linpiao",
+    "name": "google plugin demo",
+    "description": "工具",
+    "version": "1.0.0",
+    "action": {
+        "default_title": "google plugin demo",
+        "default_icon": "assets/icon48.png",
+        "default_popup": "popup.html"
+    },
+    "background": {
+        "service_worker": "js/background.js"
+    },
+    "icons": {
+        "16": "assets/icon16.png",
+        "48": "assets/icon48.png",
+        "128": "assets/icon128.png"
+    },
+    "permissions": [
+        "tabs",
+        "webRequest",
+        "declarativeNetRequest",
+        "storage",
+        "activeTab",
+        "contextMenus",
+        "scripting"
+    ],
+    "declarative_net_request": {
+        "rule_resources": [
+            {
+                "id": "ruleset_1",
+                "enabled": true,
+                "path": "/rules/rules.json"
+            }
+        ]
+    },
+    "host_permissions": [
+        "http://*/*",
+        "https://*/*"
+    ],
+    "content_scripts": [
+        {
+            "matches": [
+                "http://*/*",
+                "https://*/*"
+            ],
+            "css": [
+                "css/popup.css",
+                "css/main.css"
+            ],
+            "js": [
+                "js/chunk-vendors.js",
+                "js/main.js"
+            ],
+            "run_at": "document_start"
+        }
+    ],
+    "web_accessible_resources": [
+        {
+            "resources": [
+                "js/main.js"
+            ],
+            "matches": [
+                "<all_urls>"
+            ]
+        }
+    ],
+    "content_security_policy": {
+        "extension_pages": "script-src 'self'; object-src 'self'"
+    }
+}
