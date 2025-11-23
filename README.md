@@ -1,34 +1,43 @@
-## Start
+# 谷歌浏览器插件Demo
+
+## 说明
+
+此为demo，提供插件部分Api调用封装，具体功能可以自行开发。
+
+## 开发
+
 node: 16+
 
-## Project setup
-```
+### 库下载
+
+```bash
 npm install
 ```
 
-### Compiles and hot-reloads for development
-```
+### 本地调试
+
+```bash
 npm run watch
 ```
 
-### Compiles and minifies for production
-```
+### 打包正式包
+
+```bash
 npm run build:prod
 ```
 
-### Compiles and minifies for local
-```
-npm run build:local
-```
+## 功能列表
 
-### Lints and fixes files
-```
-npm run lint
-```
+- [x] 插件弹窗
+- [x] 插件页面
+- [x] 请求拦截
+- [x] 右键菜单
+- [x] 性能监控
+- [x] 提醒弹窗
 
 ### 文件结构
 
-```
+```md
 src
 ├─assets -- 资源文件
   ├─icon128.png
@@ -53,7 +62,7 @@ src
     ├─App.vue
     └─pages
       └─...
-├─popup -- 插件页面（通信存在于插件）
+├─popup -- 插件弹窗页面（通信存在于插件）
   ├─index.html
   ├─data.ts -- 定义数据
   ├─typeList.ts -- 定义类型
