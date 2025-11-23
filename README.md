@@ -77,6 +77,6 @@ src
 
 ```
 
-### 相关学习文档
+### 说明文档
 
-- [说明与开发流程](https://share.note.youdao.com/s/yoZ1OCD)
+- [开发流程](https://share.note.youdao.com/s/yoZ1OCD)
